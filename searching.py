@@ -21,7 +21,7 @@ def read_data(file_name, field):
     cwd_path = Path.cwd()
     
     file_path = cwd_path / file_name
-
+print("rhthr")
 
 def main():
     pass
