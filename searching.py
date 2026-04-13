@@ -4,10 +4,18 @@ import json
 
 def read_data(file_name, field):
     with open(file_name, mode = "r", encoding = "utf-8") as file:
-        data = json.load(file)
-        for data in field:
-            if data.isdigit()
-        return field
+        soubor = json.load(file)
+        if data not in soubor:
+            return None
+
+    return data[field]
+
+def linear_search(sequence, target_number):
+    positions =[]
+    for index, value in enumerate(sequence):
+          if value == target_number:
+            positions.append(index)
+    return {"positions": positions, "count": len(positions)}
 
     """
     Reads a JSON file and returns data for a given field.
