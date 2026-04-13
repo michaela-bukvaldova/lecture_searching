@@ -3,6 +3,12 @@ import json
 
 
 def read_data(file_name, field):
+    with open(file_name, mode = "r", encoding = "utf-8") as file:
+        data = json.load(file)
+        for data in field:
+            if data.isdigit()
+        return field
+
     """
     Reads a JSON file and returns data for a given field.
 
@@ -21,7 +27,6 @@ def read_data(file_name, field):
     cwd_path = Path.cwd()
     
     file_path = cwd_path / file_name
-print("rhthr")
 
 def main():
     pass
