@@ -17,11 +17,18 @@ def linear_search(sequence, target_number):
             positions.append(index)
     return {"positions": positions, "count": len(positions)}
 
-
-def binary_search(numbers_list, target_number):
-    for number in numbers_list:
-        while number != target_number:
-            return None
+def binary_search(sequence, target_number):
+    left = 0
+    right = len(sequence) + 1
+    while left <= right:
+        mid = (left + right)//2
+        if sequence[mid] == target_number:
+            return mid
+        elif sequence < target_number:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return None
 
 def main():
     unordered = read_data(file_name:"sequential.json", field:"unordered_numbers")
