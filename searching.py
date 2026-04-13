@@ -1,6 +1,8 @@
 from pathlib import Path
 import json
 
+from generators import unordered_sequence
+
 
 def read_data(file_name, field):
     with open(file_name, mode = "r", encoding = "utf-8") as file:
@@ -29,9 +31,8 @@ def binary_search(sequence, target_number):
         else:
             right = mid - 1
     return None
-
 def main():
-    unordered = read_data(file_name:"sequential.json", field:"unordered_numbers")
+    unordered = read_data("sequential.json", "unordered_numbers")
     target = 5
     linear_result = linear_search(unordered, target)
     print(linear_result)
