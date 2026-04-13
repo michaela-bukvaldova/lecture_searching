@@ -17,28 +17,17 @@ def linear_search(sequence, target_number):
             positions.append(index)
     return {"positions": positions, "count": len(positions)}
 
-    """
-    Reads a JSON file and returns data for a given field.
 
-    Args:
-        file_name (str): Name of the JSON file.
-        field (str): Key to retrieve from the JSON data.
-            Must be one of: 'unordered_numbers', 'ordered_numbers' or 'dna_sequence'.
-
-    Returns:
-        list | str | None:
-            - list: If data retrieved by the selected field contains numeric data.
-            - str: If field is 'dna_sequence'.
-            - None: If the field is not supported.
-    """
-    # get current working directory path
-    cwd_path = Path.cwd()
-    
-    file_path = cwd_path / file_name
+def binary_search(numbers_list, target_number):
+    for number in numbers_list:
+        while number != target_number:
+            return None
 
 def main():
-    pass
-
+    unordered = read_data(file_name:"sequential.json", field:"unordered_numbers")
+    target = 5
+    linear_result = linear_search(unordered, target)
+    print(linear_result)
 
 if __name__ == "__main__":
     main()
